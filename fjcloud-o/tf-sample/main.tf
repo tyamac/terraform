@@ -24,10 +24,10 @@ resource "openstack_networking_network_v2" "network_1" {
 # Subnet
 #----------------------------------------------#
 resource "openstack_networking_subnet_v2" "subnet_1" {
-  name       = (var.subnet_name)
-  network_id = (openstack_networking_network_v2.network_1.id)
-  cidr       = (var.cidr)
-  ip_version = 4
+  name            = (var.subnet_name)
+  network_id      = (openstack_networking_network_v2.network_1.id)
+  cidr            = (var.cidr)
+  ip_version      = 4
   dns_nameservers = ["8.8.8.8", "8.8.4.4"]
 }
 
@@ -42,6 +42,13 @@ resource "openstack_networking_router_v2" "router_1" {
 resource "openstack_networking_router_interface_v2" "router_interface_1" {
   router_id = (openstack_networking_router_v2.router_1.id)
   subnet_id = (openstack_networking_subnet_v2.subnet_1.id)
+}
+
+#----------------------------------------------#
+# Security Groups
+#----------------------------------------------#
+module "secgroups" {
+  source = "./modules/secgroups"
 }
 
 #----------------------------------------------#
