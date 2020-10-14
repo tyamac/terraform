@@ -1,3 +1,4 @@
+# provider
 variable auth_url {}
 variable tenant_name {}
 variable tenant_id {}
@@ -6,6 +7,8 @@ variable project_domain_id {}
 variable region {}
 variable user_name {}
 variable password {}
+
+# network
 variable network_name {}
 variable subnet_name {}
 variable cidr {}
