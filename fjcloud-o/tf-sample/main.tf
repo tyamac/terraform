@@ -62,8 +62,18 @@ module "firewall" {
 #----------------------------------------------#
 # Floating IP
 #----------------------------------------------#
-# resource "openstack_compute_floatingip_v2" "floatip_1" {
-#   pool = "fip-net"
+module "floatingip_1" {
+  source = "./modules/floatingip"
+}
+output "floatingip_1" {
+  value = (module.floatingip_1)
+}
+
+# module "floatingip_2" {
+#   source = "./modules/floatingip"
+# }
+# output "floatingip_2" {
+#   value = (module.floatingip_2)
 # }
 
 #----------------------------------------------#
