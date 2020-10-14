@@ -52,6 +52,14 @@ module "secgroups" {
 }
 
 #----------------------------------------------#
+# Firewall
+#----------------------------------------------#
+module "firewall" {
+  source = "./modules/firewall"
+  router_id = (openstack_networking_router_v2.router_1.id)
+}
+
+#----------------------------------------------#
 # Floating IP
 #----------------------------------------------#
 # resource "openstack_compute_floatingip_v2" "floatip_1" {
