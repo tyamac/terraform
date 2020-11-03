@@ -17,29 +17,30 @@ Terraform v0.13.4
 
 ## 準備
 
-1 .git cloneしたらfjcloud-oに移動し `terraform init` を実行します。
-
-2. 次に`terraform.tfvars.sample` をコピーして `terraform.tfvars` を作成し、認証情報を追記します。
+1 .git cloneしたらfjcloud-oに移動し`terraform init`を実行します。
+2. 次に`terraform.tfvars.sample`をコピーして`terraform.tfvars`を作成し、認証情報を追記します。
 
 ## 中身の説明
 
-treeするとこんな感じ。（不要なファイルは除外しています）
+treeするとこんな感じ（不要なファイルは除外しています）。
 ```
 .
 ├── main.tf
 ├── modules
-│   ├── firewall
-│   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   └── versions.tf
-│   ├── floatingip
-│   │   ├── main.tf
-│   │   └── versions.tf
-│   └── secgroups
-│       ├── main.tf
-│       └── versions.tf
+│   ├── firewall
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   └── versions.tf
+│   ├── floatingip
+│   │   ├── main.tf
+│   │   └── versions.tf
+│   └── secgroups
+│       ├── main.tf
+│       └── versions.tf
 ├── terraform.tfvars
 ├── terraform.tfvars.sample
 ├── variables.tf
 └── versions.tf
 ```
+
+
