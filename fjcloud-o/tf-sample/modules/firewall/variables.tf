@@ -1,1 +1,0 @@
-variable router_id {}
