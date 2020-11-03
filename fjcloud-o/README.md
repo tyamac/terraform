@@ -17,7 +17,8 @@ Terraform v0.13.4
 
 ## 準備
 
-1 .git cloneしたらfjcloud-oに移動し`terraform init`を実行します。
+1. `.git clone`したらfjcloud-oに移動し`terraform init`を実行します。
+
 2. 次に`terraform.tfvars.sample`をコピーして`terraform.tfvars`を作成し、認証情報を追記します。
 
 ## 中身の説明
