@@ -18,3 +18,7 @@ variable subnet_name {}
 variable cidr {}
 variable router_name {}
 
+#----------------------------------------------#
+# Compute
+#----------------------------------------------#
+variable image_name {}

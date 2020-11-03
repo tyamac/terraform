@@ -19,6 +19,13 @@ provider "openstack" {
 data "openstack_networking_network_v2" "external_network" {
   name = "fip-net"
 }
+data "openstack_images_image_v2" "windows" {
+  name = (var.image_name)
+}
+
+output "image_id" {
+  value = data.openstack_images_image_v2.windows.id
+}
 
 #----------------------------------------------#
 # Network

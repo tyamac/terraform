@@ -32,3 +32,8 @@ network_name        = "tf-network"
 subnet_name         = "tf-subnet"
 cidr                = "192.168.31.0/24"
 router_name         = "tf-router"
+
+#----------------------------------------------#
+# Compute
+#----------------------------------------------#
+image_name = ""
