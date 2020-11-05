@@ -94,8 +94,18 @@ output "floatingip_1" {
 #----------------------------------------------#
 # Compute
 #----------------------------------------------#
-# resource "openstack_compute_instance_v2" "terraform-test-server" {
-#   name = (var.openstack_server_name)
-#   image_id = (var.openstack_image_id)
-#   flavor_id = (var.flavor_id)
-# }
+resource "openstack_compute_instance_v2" "test_instance_1" {
+  name      = (var.instance_name)
+  image_id  = (data.openstack_images_image_v2.windows.id)
+  flavor_id = (var.flavor_id)
+
+  block_device {
+    source_type = "image"
+    volume_size = (var.volume_size)
+  }
+
+  network {
+    uuid = (openstack_networking_network_v2.network_1.id)
+  }
+
+}

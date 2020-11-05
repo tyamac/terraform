@@ -21,4 +21,7 @@ variable router_name {}
 #----------------------------------------------#
 # Compute
 #----------------------------------------------#
+variable instance_name {}
 variable image_name {}
+variable flavor_id {}
+variable volume_size {}

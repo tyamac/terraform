@@ -36,4 +36,7 @@ router_name         = "tf-router"
 #----------------------------------------------#
 # Compute
 #----------------------------------------------#
-image_name = ""
+instance_name = ""
+image_name    = ""
+flavor_id     = ""
+volume_seze   = ""
